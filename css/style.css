@@ -1,0 +1,43 @@
+.ad-box {
+    background-color: #f1f1f1;
+    border: 2px dashed #ccc;
+    height: 100%;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .category-panel {
+    max-height: 600px;
+    overflow-y: auto;
+    padding-right: 10px;
+  }
+
+  .card h5 {
+    font-size: 1.1rem;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+  }
+
+  .section-title {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 100px;
+  }
+
+  /* Optional: style the scrollbar (WebKit only) */
+  .category-panel::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .category-panel::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 10px;
+  }
