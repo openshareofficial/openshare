@@ -45,4 +45,4 @@ openshare/
 
 **Prashant Tharu**  
 📍 Nepal  
-📫 Contact: openshare.official@gmail.com _(or your preferred contact method)_
+📫 Contact: openshareofficial@gmail.com 
