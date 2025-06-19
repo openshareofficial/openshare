@@ -31,9 +31,13 @@ This project is **not open-source** and is intended for **personal or official u
 openshare/
 
 ├── index.html
+
 ├── css/
+
 ├── images/
+
 ├── category-pages/
+
 └── README.md
 
 
