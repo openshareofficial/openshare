@@ -1,3 +1,20 @@
+.search-box input {
+  border-radius: 25px;
+  padding: 8px 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.search-box input:focus {
+  outline: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.search-box button {
+  border-radius: 25px;
+  padding: 8px 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
 .ad-box {
     background-color: #f1f1f1;
     border: 2px dashed #ccc;
@@ -40,4 +57,11 @@
   .category-panel::-webkit-scrollbar-thumb {
     background-color: #ccc;
     border-radius: 10px;
+  }
+  footer{
+    position: fixed;
+    display: block;
+    width: 100%;
+  
+    text-align: center;
   }
