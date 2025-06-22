@@ -5,6 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Downloads - OpenShare</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+  .search-box input {
+  border-radius: 25px;
+  padding: 8px 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.search-box input:focus {
+  outline: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.search-box button {
+  border-radius: 25px;
+  padding: 8px 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+  </style>
 </head>
 <body>
 
@@ -16,9 +35,9 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <form class="d-flex mt-8 mt-lg-50" justify-content="center" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search tools..." aria-label="Search">
-            <button class="btn btn-outline-light" type="submit">Search</button>
+        <form class="d-flex search-box mx-auto my-2 my-lg-0" role="search">
+          <input class="form-control me-2" id="searchInput" type="search" placeholder="Search software..." aria-label="Search">
+          <button class="btn btn-light" type="button">Search</button>
         </form>
         <ul class="navbar-nav ms-auto">
             <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
@@ -54,29 +73,29 @@
         </thead>
         <tbody>
           <tr>
-            <td>CCleaner</td>
-            <td>PC cleaner to optimize and speed up your system.</td>
+            <td class="card-title">CCleaner</td>
+            <td class="car-text">PC cleaner to optimize and speed up your system.</td>
             <td>6.15</td>
             <td>.exe</td>
             <td><a href="#" class="btn btn-sm btn-success">Download</a></td>
           </tr>
           <tr>
-            <td>Notion</td>
-            <td>All-in-one workspace for notes and project planning.</td>
+            <td class="card-title">Notion</td>
+            <td class="car-text">All-in-one workspace for notes and project planning.</td>
             <td>2.3.5</td>
             <td>.exe / .dmg</td>
             <td><a href="#" class="btn btn-sm btn-success">Download</a></td>
           </tr>
           <tr>
-            <td>OBS Studio</td>
-            <td>Screen recorder and live streaming software.</td>
+            <td class="card-title">OBS Studio</td>
+            <td class="car-text">Screen recorder and live streaming software.</td>
             <td>29.1</td>
             <td>.zip</td>
             <td><a href="#" class="btn btn-sm btn-success">Download</a></td>
           </tr>
           <tr>
-            <td>WinRAR</td>
-            <td>Powerful archiver and file compression tool.</td>
+            <td class="card-title">WinRAR</td>
+            <td class="car-text">Powerful archiver and file compression tool.</td>
             <td>6.22</td>
             <td>.exe</td>
             <td><a href="#" class="btn btn-sm btn-success">Download</a></td>
@@ -94,5 +113,22 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const searchInput = document.getElementById("searchInput");
+
+      searchInput.addEventListener("keyup", function () {
+        const keyword = this.value.toLowerCase();
+        const cards = document.querySelectorAll(".card");
+
+        cards.forEach(card => {
+          const title = card.querySelector(".card-title").textContent.toLowerCase();
+          const desc = card.querySelector(".card-text").textContent.toLowerCase();
+          const match = title.includes(keyword) || desc.includes(keyword);
+          card.parentElement.style.display = match ? "block" : "none";
+        });
+      });
+    });
+  </script>
 </body>
 </html>
